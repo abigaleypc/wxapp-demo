@@ -1,0 +1,19 @@
+
+<view class="container">
+  <view class="page-body">
+    <view wx:for="{{chatInfo.msg}}"  wx:key="msg">
+      <view wx:if="{{item.type == 'friend'}}" class="friend">
+        <image class="avatar" src="{{chatInfo.userInfo.avatarPath}}"/>
+        <view>{{item.msg}}</view>
+      </view>
+      <view wx:else class="self">
+        <view>{{item.msg}}</view>
+        <image class="avatar" src="{{chatInfo.userInfo.avatarPath}}"/>
+      </view>
+    </view>
+    <view class="msg-input">
+      <input class="send-input" auto-focus bindinput="msgContent" value="{{inputValue}}"/>
+      <button class="send-btn" bindtap="sendMsg">发送</button>
+    </view>
+  </view>
+</view>

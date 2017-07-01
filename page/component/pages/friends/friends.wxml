@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="page-body">
+    <scroll-view scroll-y="true" style="height: 900rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <view wx:for="{{friends}}" wx:key="id">
+        <navigator url="chat?id={{index+1}}" hover-class="navigator-hover" class="friend-item">
+          <image class="avatar" src="{{item.avatarPath}}"/>
+          <view class="name">{{item.name}}</view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>

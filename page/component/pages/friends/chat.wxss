@@ -1,0 +1,34 @@
+.avatar {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+.self, .friend {
+  padding: 10px;
+  width: 100%;
+}
+.self {
+  float: right;
+  text-align: right;
+}
+.msg-input {
+  width: 100%;
+  padding: 10px;
+}
+.send-input {
+  border:1px solid #eee;
+  height:33px;
+  float:left;
+  width:70%;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.send-btn {
+  width:20%;
+  height:34px;
+  font-size:18px;
+  line-height:2;
+  margin:0;
+  float:right;
+  margin-right:20px;
+}
