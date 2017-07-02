@@ -2,42 +2,11 @@
     "pages": [
         "page/component/index",
 
-        "page/component/pages/view/view",
-        "page/component/pages/scroll-view/scroll-view",
-        "page/component/pages/swiper/swiper",
+        
 
-        "page/component/pages/text/text",
-        "page/component/pages/icon/icon",
-        "page/component/pages/progress/progress",
-
-        "page/component/pages/button/button",
-        "page/component/pages/checkbox/checkbox",
-        "page/component/pages/form/form",
-        "page/component/pages/input/input",
-        "page/component/pages/label/label",
-        "page/component/pages/picker/picker",
-        "page/component/pages/radio/radio",
-        "page/component/pages/slider/slider",
-        "page/component/pages/switch/switch",
-        "page/component/pages/textarea/textarea",
-
-        "page/component/pages/navigator/navigator",
-        "page/component/pages/navigator/navigate",
-        "page/component/pages/navigator/redirect",
-
-        "page/component/pages/image/image",
-        "page/component/pages/audio/audio",
-        "page/component/pages/video/video",
-
-        "page/component/pages/map/map",
-
-        "page/component/pages/canvas/canvas",
-
-        "page/component/pages/demo/demo",
         "page/component/pages/friends/friends",
         "page/component/pages/friends/chat",
 
-        "page/component/pages/temp-scroll-view/temp-scroll-view",
 
         "page/API/index",
 
