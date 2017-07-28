@@ -38,6 +38,15 @@ Page({
     ]
   },
   onLoad: function (options) {
+    wx.connectSocket({
+      url: 'wss://youngdze.co:8443',
+      header: {
+        'content-type': 'application/json'
+      }
+    });
+    wx.onSocketOpen(function() {
+      console.log('socket connects successfully!');
+    })
   },
   onReady: function () {
     // Do something when page ready.

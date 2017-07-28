@@ -122,7 +122,7 @@ Page({
                 },
                 {
                     'type': 'self',
-                    'msg': '尸王殿'
+                    'msg': '王殿'
                 },
                 {
                     'type': 'friend',
@@ -205,11 +205,13 @@ Page({
         })
     },
     sendMsg: function () {
+        var that = this;
         if (this.data.inputValue.length > 0) {
+            const inputValue = this.data.inputValue;
             let newMsg = this.data.chatInfo.msg;
             newMsg.push({
                 'type': 'self',
-                'msg': this.data.inputValue
+                'msg': inputValue
             })
             this.setData({
                 inputValue: '',
@@ -219,8 +221,26 @@ Page({
                 },
                 scrollTop: this.data.scrollTop + 10
             })
+            wx.sendSocketMessage({
+                data: JSON.stringify({msg: inputValue})
+            });
+            wx.onSocketMessage(function(data) {
+                try {
+                    data = JSON.parse(data.data);
+                } catch (err) {
+                    console.log('not valid json!')
+                }
+                newMsg.push({
+                    'type': 'friend',
+                    msg: data.msg
+                });
+                that.setData({
+                    chatInfo: {
+                        userInfo: that.data.chatInfo.userInfo,
+                        msg: newMsg
+                    }
+                });
+            })
         }
-        // let a = document;
-        // console.log(a)
     }
 })

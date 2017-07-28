@@ -1,0 +1,18 @@
+<import src="../../../common/head.axml" />
+<import src="../../../common/foot.axml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'text'}}"/>
+
+  <view class="page-body">
+    <view class="page-section page-section-spacing">
+      <view class="text-box" scroll-y="true" scroll-top="{{scrollTop}}">
+        <text>{{text}}</text>
+      </view>
+      <button disabled="{{!canAdd}}" onTap="add">add line</button>
+      <button disabled="{{!canRemove}}" onTap="remove">remove line</button>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>
